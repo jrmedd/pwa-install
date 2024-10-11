@@ -1,13 +1,13 @@
 import { html } from 'lit';
-import { WebAppManifest } from 'web-app-manifest';
+import { Manifest } from '../types/types';
 
-const template = (screenshots: WebAppManifest['screenshots'], theme: string, scrollToNextPage: any, scrollToPrevPage: any) => {
+const template = (screenshots: Manifest['screenshots'], theme: string, scrollToNextPage: any, scrollToPrevPage: any) => {
     return html`
         ${screenshots? html`
             <div id="paginated_gallery" class="gallery ${theme}">
                 <div class="gallery_scroller">
                     <div class="scroller_wrap">
-                        ${screenshots.map(screenshot => html`<img draggable="false" src='${screenshot.src}'>`)}
+                        ${screenshots.map(screenshot => html`<img draggable="false" alt=${screenshot.label} src='${screenshot.src}'>`)}
                     </div>
                 </div>
                 <span class="btn prev" @click="${scrollToPrevPage}">

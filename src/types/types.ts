@@ -24,6 +24,23 @@ export interface PWAInstallAttributes {
     icon?: string;
 }
 
+/**
+ * Represents an accessible image resource that extends a basic image resource
+ * with additional information to enhance accessibility.
+ *
+ * @interface AccessibleImageResource
+ * @extends {ImageResource} - Inherits properties from the ImageResource interface.
+ * 
+ * @property {string} label - A descriptive label for the image, used to provide 
+ * additional context for users with accessibility needs.
+ *
+ * @see https://w3c.github.io/image-resource/#label-member - For more details 
+ * on the 'label' property and its intended use in accessibility.
+ */
+export interface AccessibleImageResource extends ImageResource {
+  label: string;
+}
+
 export class Manifest {
     constructor() {
         this.icons = [{ src: '' }];
@@ -34,7 +51,7 @@ export class Manifest {
     }
     short_name: string;
     icons: ImageResource[];
-    screenshots?: ImageResource[];
     name: string;
+    screenshots?: AccessibleImageResource[];
     description: string;
 }

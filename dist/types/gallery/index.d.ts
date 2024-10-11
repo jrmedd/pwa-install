@@ -1,7 +1,7 @@
 import { LitElement } from 'lit';
-import { WebAppManifest } from 'web-app-manifest';
+import { Manifest } from '../types/types';
 export default class PWAGalleryElement extends LitElement {
-    screenshots: WebAppManifest['screenshots'];
+    screenshots: Manifest['screenshots'];
     theme: 'default' | 'apple_desktop' | 'apple_mobile';
     static get styles(): CSSStyleSheet;
     calcScrollSize: () => {

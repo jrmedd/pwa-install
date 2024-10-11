@@ -1,10 +1,10 @@
 {
-  "name": "@khmyznikov/pwa-install",
-  "version": "0.4.6",
-  "description": "PWA install dialog provide more convenience user experience and fix lack of native dialogs in some browsers.",
+  "name": "@jrmedd/pwa-install",
+  "version": "0.4.7",
+  "description": "Edit of khmyznikov's PWA install dialog provide more convenience user experience and fix lack of native dialogs in some browsers. Incudes label/alt text for screenshots",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/khmyznikov/pwa-install.git"
+    "url": "git+https://github.com/jrmedd/pwa-install.git"
   },
   "type": "module",
   "types": "dist/types/index.d.ts",
@@ -43,7 +43,7 @@
     "test:nobuild": "node ./webpack/serve.js",
     "dev": "webpack serve --config webpack/webpack.dev.js --mode=development"
   },
-  "author": "khmyznikov",
+  "author": "jrmedd",
   "license": "MIT",
   "devDependencies": {
     "@custom-elements-manifest/analyzer": "^0.10.3",
@@ -57,7 +57,7 @@
     "express": "^4.21.1",
     "filemanager-webpack-plugin": "^8.0.0",
     "lit-scss-loader": "^2.0.1",
-    "minify-lit-html-loader": "github:khmyznikov/minify-lit-html-loader",
+    "minify-lit-html-loader": "github:jrmedd/minify-lit-html-loader",
     "null-loader": "^4.0.1",
     "postcss": "^8.4.47",
     "postcss-import": "^16.1.0",
@@ -80,9 +80,9 @@
     "@types/dom-chromium-installation-events": "^101.0.4"
   },
   "bugs": {
-    "url": "https://github.com/khmyznikov/pwa-install/issues"
+    "url": "https://github.com/jrmedd/pwa-install/issues"
   },
-  "homepage": "https://github.com/khmyznikov/pwa-install#readme",
+  "homepage": "https://github.com/jrmedd/pwa-install#readme",
   "keywords": [
     "PWA",
     "lit-element",

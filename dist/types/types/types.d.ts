@@ -19,12 +19,15 @@ export interface PWAInstallAttributes {
     description?: string;
     icon?: string;
 }
+export interface AccessibleImageResource extends ImageResource {
+    label: string;
+}
 export declare class Manifest {
     constructor();
     short_name: string;
     icons: ImageResource[];
-    screenshots?: ImageResource[];
     name: string;
+    screenshots?: AccessibleImageResource[];
     description: string;
 }
 export {};
